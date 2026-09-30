@@ -31,6 +31,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
        <Link href="/books">Books</Link>
+       <Link href="/listed-books">ListedBooks</Link>
       <li>
         <details>
           <summary>Parent</summary>

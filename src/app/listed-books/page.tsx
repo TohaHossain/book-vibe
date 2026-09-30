@@ -1,6 +1,10 @@
-import React from 'react';
+'useClient'
+import { BooksContext } from '@/context/BooksContext';
+import React,{ useContext } from 'react';
 
-const page = () => {
+const ListedBooks = () => {
+    const {readBooks}=useContext(BooksContext)
+    console.log(readBooks,"readBooks")
     return (
         <div>
             listed books page is rendered
@@ -8,4 +12,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default ListedBooks;

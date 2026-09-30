@@ -28,7 +28,7 @@ const Books = async () => {
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {booksData.map((book:IBook,ind) => {
+        {booksData.map((book:IBook,ind:number) => {
                return <BookCard key={ind} book={book}/>
 })}
       </div>

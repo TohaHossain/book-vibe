@@ -15,6 +15,7 @@ const getBooks = async () => {
 
 const Books = async () => {
   const booksData = await getBooks();
+  console.log(booksData,"booksData");
 
   return (
     <section className="container mx-auto my-[70px] px-4">
@@ -28,7 +29,7 @@ const Books = async () => {
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
-        {booksData.slice(0,9).map((book:IBook,ind) => {
+        {booksData.slice(0,9).map((book:IBook,ind:number) => {
                return <BookCard key={ind} book={book}/>
 })}
       </div>

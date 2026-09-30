@@ -57,7 +57,7 @@ const BookCard = ({book}:IBookCardProps) => {
         </div>
 
         {/* Button */}
-        <Link href={`/books/${book.bookid}`}>
+        <Link href={`/books/${book.bookId}`}>
           <button className="mt-5 w-full rounded-lg bg-gray-900 py-2.5 text-sm font-medium text-white transition hover:bg-gray-700">
             View Details
           </button>
