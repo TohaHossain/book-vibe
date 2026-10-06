@@ -1,15 +1,17 @@
-'use client'
+'use client';
 import { IBook } from '@/types/books.type';
 import React,{ useContext } from 'react';
 
-import { BooksContext } from '@/context/BooksContext';
+import BooksProvider, { BooksContext } from '@/context/BooksContext';
+import { toast } from 'react-toastify/unstyled';
 
 const ReadButton = ({book}:{book:IBook}) => {
     const {readBooks,setReadBooks}=useContext(BooksContext);
-    console.log(booksProvider,'booksProvider')
+    console.log(BooksProvider,'booksProvider')
     const handleReadBook=()=>{
         console.log("ReadBook button triggered",book)
         setReadBooks([...readBooks,book])
+        toast.success(`you have read "${book.bookName}"`);
     };
     return (
         <div>

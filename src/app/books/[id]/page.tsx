@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ReadButton from "@/components/bookDetails/ReadButton";
+import WishListButton from "@/components/bookDetails/WishListButton";
 
 interface IBookDetailsPageProps {
   params: Promise<{
@@ -226,7 +227,7 @@ const BookDetailsPage = async ({
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <ReadButton book={book}/>
                 <button className="group flex items-center justify-center gap-2 rounded-xl bg-gray-950 px-7 py-4 font-semibold text-white shadow-lg shadow-gray-900/10 transition duration-300 hover:-translate-y-0.5 hover:bg-gray-800">WishList</button>
-
+                <WishListButton book={book}/>
                 <button
                   className="group flex items-center justify-center gap-2 rounded-xl bg-gray-950 px-7 py-4 font-semibold text-white shadow-lg shadow-gray-900/10 transition duration-300 hover:-translate-y-0.5 hover:bg-gray-800"
                 >
